@@ -1,0 +1,12 @@
+<launch>
+    <!-- Launch the pose detection node -->
+    <node pkg="robot_follow" type="skeleton.py" name="mediapipe_pose_detection" output="screen">
+        <!-- Any parameters or remappings can be added here -->
+    </node>
+
+    <!-- Launch the person follower node -->
+    <node pkg="robot_follow" type="PersonFollower.py" name="person_follower" output="screen">
+        <!-- Any parameters or remappings can be added here -->
+    </node>
+</launch>
+
