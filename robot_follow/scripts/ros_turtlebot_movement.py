@@ -65,7 +65,7 @@ def calculate_distance(depth_image, x, y, min_valid_distance=0.1):
     return distance
 
 def process_and_control_movement():
-    global global_image_depth, center_x, center_y
+    global global_image_depth, center_x, center_y, integral_error, previous_error  # Add 'integral_error' and 'previous_error' here
     image_width = 640  # Adjust according to your camera's resolution
     image_height = 480  # Adjust according to your camera's resolution
     current_linear_x = 0
