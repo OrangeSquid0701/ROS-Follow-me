@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import wave
 import pyaudio
 import time
@@ -98,11 +100,11 @@ def repeat_audio(file_name, model, repeat_interval=5):
             break
 
 # Load Vosk model
-model_path = "vosk-model-small-en-us-0.15"  # Update with the path to your model
+model_path = "/home/charmander/catkin_ws/src/follow_me/scripts/vosk-model-small-en-us-0.15"  # Update with the path to your model
 model = vosk.Model(model_path)
 
 # Specify your .wav file name
-audio_file = 'SpongebobStopFollow.wav'
+audio_file = '/home/charmander/catkin_ws/src/follow_me/scripts/spongebobstop.wav'
 
 # Repeat the audio indefinitely every 5 seconds until "yes" is detected
 repeat_audio(audio_file, model, repeat_interval=5)
